@@ -147,20 +147,20 @@ let foodSound = new Audio('food.mp3');
 let gameOverSound = new Audio('gameover.mp3');
 let moveSound = new Audio('move.mp3');
 
-let SnakeSpeed = prompt("Enter The Speed Of The Snake In Number: (Default Is 30)", 20);
+let SnakeSpeed = prompt("Enter The Speed Of The Snake In Number: (Default Is 20)", 20) || 20;
 var Difficulty = prompt("Enter The Difficulty Of The Game (easy -> {No Effect Of Wall & Body Hit}, medium -> {No Effect Of Wall, But Will Die For Body Hit}, hard -> {Will Die For Wall Hit & Body Hit}): (Default Is medium)", "medium") || "medium";
 var bgcolor = prompt("Enter The Color Of The Snake (Color Name Or Hex Value): (Default Is #ff0)", "#ff0") || "#ff0";
 var type = prompt("Enter The Body Type Of The Snake (Square or Circle): (Default Is Circle)", "Circle") || "50%";
 var arr = prompt("Enter The Comma Separated Area Size (Row, Column): (Default Is 20, 20)", "20, 20") || [20, 20];
 alert("USE ARROW KEYS TO MOVE THE SNAKE!!!");
 
-arr = (arr)? ((arr.includes(","))? arr.split(","): [36,36]) : [36,36];
+arr = (arr)? ((arr.includes(","))? arr.split(","): [20, 20]) : [20, 20];
 
 for(let g = 0; g < arr.length; g++){
     arr[g] = Number(arr[g]);
 }
 
-arr = (!(isNaN(arr[0])) && !(isNaN(arr[1])))? arr: [36,36];
+arr = (!(isNaN(arr[0])) && !(isNaN(arr[1])))? arr: [20, 20];
 
 for(let g = 0; g < arr.length; g++){
     arr[g] = Number(arr[g]);
